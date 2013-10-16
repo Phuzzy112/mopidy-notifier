@@ -1,6 +1,7 @@
 from __future__ import unicode_literals
 
 import re
+
 from setuptools import setup, find_packages
 
 
@@ -37,7 +38,7 @@ setup(
         'Environment :: No Input/Output (Daemon)',
         'Intended Audience :: End Users/Desktop',
         'License :: OSI Approved :: Apache Software License',
-        'Operating System :: Mac OSX 10.8',
+        'Operating System :: MacOS :: MacOS X',
         'Programming Language :: Python :: 2',
         'Topic :: Multimedia :: Sound/Audio :: Players',
     ],
