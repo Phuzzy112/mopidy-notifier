@@ -28,7 +28,6 @@ setup(
         'Mopidy >= 0.14',
         'Pykka >= 1.1',
     ],
-
     entry_points={
         'mopidy.ext': [
             'notifier = mopidy_notifier:Extension',
