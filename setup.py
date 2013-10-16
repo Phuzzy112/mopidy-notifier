@@ -11,14 +11,14 @@ def get_version(filename):
 
 
 setup(
-    name='Mopidy-Terminal-Notifier',
-    version=get_version('mopidy_terminal_notifier/__init__.py'),
-    url='https://github.com/sauberfred/mopidy-terminal-notifier',
+    name='Mopidy-Notifier',
+    version=get_version('mopidy_notifier/__init__.py'),
+    url='https://github.com/sauberfred/mopidy-notifier',
     license='Apache License, Version 2.0',
     author='Florian',
     author_email='florian.rott@gmail.com',
-    description='Mopidy extension for Foobar mechanics',
-    long_description=open('README.rst').read(),
+    description='Mopidy extension for displaying Trackinfo as User Notifications on Mac OS X 10.8',
+    long_description=open('README.md').read(),
     packages=find_packages(exclude=['tests', 'tests.*']),
     zip_safe=False,
     include_package_data=True,
@@ -30,7 +30,7 @@ setup(
 
     entry_points={
         'mopidy.ext': [
-            'notifier = mopidy_terminal_notifier:Extension',
+            'notifier = mopidy_notifier:Extension',
         ],
     },
     classifiers=[

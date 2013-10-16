@@ -6,9 +6,9 @@ import pykka
 from mopidy.core import CoreListener
 
 
-class TerminalNotifierFrontend(pykka.ThreadingActor, CoreListener):
+class NotifierFrontend(pykka.ThreadingActor, CoreListener):
     def __init__(self, config, core):
-        super(TerminalNotifierFrontend, self).__init__()
+        super(NotifierFrontend, self).__init__()
         self.config = config
         self.core = core
 

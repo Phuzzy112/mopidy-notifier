@@ -10,7 +10,7 @@ __version__ = '0.1.0'
 
 class Extension(ext.Extension):
 
-    dist_name = 'Mopidy-Terminal-Notifier'
+    dist_name = 'Mopidy-Notifier'
     ext_name = 'notifier'
     version = __version__
 
@@ -23,5 +23,5 @@ class Extension(ext.Extension):
         return schema
 
     def get_frontend_classes(self):
-        from .frontend import TerminalNotifierFrontend
-        return [TerminalNotifierFrontend]
+        from .frontend import NotifierFrontend
+        return [NotifierFrontend]
