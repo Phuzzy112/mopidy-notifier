@@ -17,19 +17,16 @@ It uses the command-line tool `terminal-notifier <https://github.com/alloy/termi
 
 Installation
 ============
-
 First install `terminal-notifier <https://github.com/alloy/terminal-notifier>`_ via Homebrew:
-
+	
 	brew install terminal-notifier
-
+	
 Install mopidy-notifier by running:
-
+	
 	pip install mopidy-notifier
-
-
+	
 Configuration
 =============
-
 Before starting Mopidy, you must add configuration for
 mopidy-terminal-notifier to your Mopidy configuration file:
 
