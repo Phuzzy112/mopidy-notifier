@@ -1,7 +1,6 @@
 from __future__ import unicode_literals
 
 import re
-
 from setuptools import setup, find_packages
 
 
@@ -12,7 +11,7 @@ def get_version(filename):
 
 
 setup(
-    name='Mopidy-Notifier',
+    name='mopidy-notifier',
     version=get_version('mopidy_notifier/__init__.py'),
     url='https://github.com/sauberfred/mopidy-notifier',
     license='Apache License, Version 2.0',
