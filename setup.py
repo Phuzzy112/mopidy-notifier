@@ -11,7 +11,7 @@ def get_version(filename):
 
 
 setup(
-    name='mopidy-notifier',
+    name='Mopidy-Notifier',
     version=get_version('mopidy_notifier/__init__.py'),
     url='https://github.com/sauberfred/mopidy-notifier',
     license='Apache License, Version 2.0',
