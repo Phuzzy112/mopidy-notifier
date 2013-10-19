@@ -21,14 +21,8 @@ First install `terminal-notifier <https://github.com/alloy/terminal-notifier>`_ 
 	
 	brew install terminal-notifier
 	
-Install mopidy-notifier by running::
+Then install mopidy-notifier by running::
 	
 	pip install mopidy-notifier
-	
-Configuration
-=============
-Before starting Mopidy, you must add configuration for
-mopidy-terminal-notifier to your Mopidy configuration file::
 
-	[notifier]
-	enable = ture
+Now you should be all set up!
