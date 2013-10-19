@@ -10,7 +10,7 @@ __version__ = '1.0.0'
 
 class Extension(ext.Extension):
 
-    dist_name = 'mopidy-notifier'
+    dist_name = 'Mopidy-Notifier'
     ext_name = 'notifier'
     version = __version__
 
