@@ -19,7 +19,7 @@ setup(
     author='sauberfred',
     author_email='florian.rott@me.com',
     description='Mopidy extension for displaying Trackinfo as User Notifications on Mac OS X 10.8',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     packages=find_packages(exclude=['tests', 'tests.*']),
     zip_safe=False,
     include_package_data=True,
