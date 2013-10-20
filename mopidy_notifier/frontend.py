@@ -15,6 +15,9 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
     def on_start(self):
         subprocess.call(['terminal-notifier', '-title', 'Mopidy', '-message', 'Starting...', '-group', 'mopidy'])
 
+    def on_stop(self):
+        subprocess.call(['terminal-notifier', '-title', 'Mopidy', '-message', 'Shutting down...', '-group', 'mopidy'])
+
     def track_playback_started(self, tl_track):
         track = tl_track.track
         song = track.name
