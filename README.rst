@@ -30,3 +30,30 @@ Then install mopidy-notifier by running::
     pip install mopidy-notifier
 
 Now you should be all set up!
+
+
+Configuration
+=============
+
+No configuration is needed. The extension is enabled by default when it is
+installed. To disable it, add the following to your Mopidy config file::
+
+    [notifier]
+    enabled = false
+
+
+Project resources
+=================
+
+- `Source code <https://github.com/sauberfred/mopidy-notifier>`_
+- `Issue tracker <https://github.com/sauberfred/mopidy-notifier/issues>`_
+- `Download development snapshot <https://github.com/sauberfred/mopidy-notifier/tarball/master#egg=Mopidy-Notifier-dev>`_
+
+
+Changelog
+=========
+
+v0.2.0 (2013-10-20)
+-------------------
+
+- Initial release.
