@@ -3,11 +3,11 @@ Mopidy-Notifier
 ***************
 
 .. image:: https://pypip.in/v/Mopidy-Notifier/badge.png
-    :target: https://crate.io/packages/Mopidy-Notifier/
+    :target: https://pypi.python.org/pypi/Mopidy-Notifier/
     :alt: Latest PyPI version
 
 .. image:: https://pypip.in/d/Mopidy-Notifier/badge.png
-    :target: https://crate.io/packages/Mopidy-Notifier/
+    :target: https://pypi.python.org/pypi/Mopidy-Notifier/
     :alt: Number of PyPI downloads
 
 
