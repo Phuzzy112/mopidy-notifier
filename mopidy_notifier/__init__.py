@@ -22,6 +22,6 @@ class Extension(ext.Extension):
         schema = super(Extension, self).get_config_schema()
         return schema
 
-    def get_frontend_classes(self):
+    def setup(self, registry):
         from .frontend import NotifierFrontend
-        return [NotifierFrontend]
+        registry.add('frontend', NotifierFrontend)
