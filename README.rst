@@ -21,7 +21,7 @@ Installation
 ============
 
 Install the ``mopidy-notifier`` package from the
-`mopidy/mopidy <https://github.com/mopidy/homebrew-mopidy>`_ Homebrew tap:
+`mopidy/mopidy <https://github.com/mopidy/homebrew-mopidy>`_ Homebrew tap::
 
     brew install mopidy-notifier
 
