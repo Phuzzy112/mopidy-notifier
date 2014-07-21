@@ -20,16 +20,21 @@ uses the command-line tool `terminal-notifier
 Installation
 ============
 
-First install `terminal-notifier <https://github.com/alloy/terminal-notifier>`_
+Install the ``mopidy-notifier`` package from the
+`mopidy/mopidy <https://github.com/mopidy/homebrew-mopidy>`_ Homebrew tap::
+
+    brew install mopidy-notifier
+
+Now you should be all set up!
+
+Alternatively, first install `terminal-notifier <https://github.com/alloy/terminal-notifier>`_
 via Homebrew::
 
     brew install terminal-notifier
 
-Then install mopidy-notifier by running::
+Then install ``mopidy-notifier`` from PyPI::
 
     pip install mopidy-notifier
-
-Now you should be all set up!
 
 
 Configuration
