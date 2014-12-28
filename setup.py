@@ -17,7 +17,7 @@ setup(
     license='Apache License, Version 2.0',
     author='sauberfred',
     author_email='florian.rott@me.com',
-    description='Mopidy extension for displaying Trackinfo as User Notifications on Mac OS X 10.8',
+    description='Mopidy extension for displaying Trackinfo as notifications on Mac OS X 10.8 and Linux',
     long_description=open('README.rst').read(),
     packages=find_packages(exclude=['tests', 'tests.*']),
     zip_safe=False,

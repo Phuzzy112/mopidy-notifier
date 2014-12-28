@@ -12,9 +12,10 @@ Mopidy-Notifier
 
 
 `Mopidy <http://www.mopidy.com>`_ extension for displaying the Trackinfo (Song,
-Artist and Album) in the Notification Center of Mac OS X 10.8 and higher.  It
-uses the command-line tool `terminal-notifier
-<https://github.com/alloy/terminal-notifier>`_ .
+Artist and Album) in notifications in either the Notification Center of Mac OS
+X 10.8 and higher, using the command-line tool `terminal-notifier
+<https://github.com/alloy/terminal-notifier>`_ , or via libnotify on Linux
+systems, using `notify-send` (usually bundled with libnotify).
 
 
 Installation
@@ -57,6 +58,11 @@ Project resources
 
 Changelog
 =========
+
+v0.3.1 (????-??-??)
+-------------------
+
+- Support for Linux/libnotify.
 
 v0.3.0 (2014-02-04)
 -------------------

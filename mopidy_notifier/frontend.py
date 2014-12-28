@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 
 import subprocess
 import pykka
+import sys
 
 from mopidy.core import CoreListener
 
@@ -12,11 +13,21 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
         self.config = config
         self.core = core
 
+    def notify(self, message):
+        if sys.platform.startswith('darwin'):
+            call = ['terminal-notifier', '-title', 'Mopidy', '-message', message, '-group', 'mopidy']
+        elif sys.platform.startswith('linux'):
+            call = ['notify-send', 'Mopidy', message, '--icon=multimedia-player']
+        else:
+            # Unsupported system
+            raise EnvironmentError((1, "This operating system is not supported."))
+        subprocess.call(call)
+
     def on_start(self):
-        subprocess.call(['terminal-notifier', '-title', 'Mopidy', '-message', 'Starting...', '-group', 'mopidy'])
+        self.notify('Starting...')
 
     def on_stop(self):
-        subprocess.call(['terminal-notifier', '-title', 'Mopidy', '-message', 'Shutting down...', '-group', 'mopidy'])
+        self.notify('Shutting down...')
 
     def track_playback_started(self, tl_track):
         track = tl_track.track
@@ -24,4 +35,4 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
         artists = ', '.join([a.name for a in track.artists])
         album = track.album.name
         message = artists + ' - ' + album
-        subprocess.call(['terminal-notifier', '-title', song, '-message', message, '-group', 'mopidy'])
+        self.notify(message)
