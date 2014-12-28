@@ -59,7 +59,7 @@ Project resources
 Changelog
 =========
 
-v0.3.1 (????-??-??)
+v0.3.1 (2014-12-28)
 -------------------
 
 - Support for Linux/libnotify.
