@@ -34,5 +34,5 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
         song = track.name
         artists = ', '.join([a.name for a in track.artists])
         album = track.album.name
-        message = artists + ' - ' + album
+        message = song + '\\n' + artists + ' - ' + album
         self.notify(message)
