@@ -13,9 +13,9 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
         self.config = config
         self.core = core
 
-    def notify(self, message):
+    def notify(self, message, subtitle):
         if sys.platform.startswith('darwin'):
-            call = ['terminal-notifier', '-title', 'Mopidy', '-message', message, '-group', 'mopidy']
+            call = ['terminal-notifier', '-title', 'Mopidy', '-subtitle', subtitle, '-message', message, '-group', 'mopidy']
         elif sys.platform.startswith('linux'):
             call = ['notify-send', 'Mopidy', message, '--icon=multimedia-player']
         else:
@@ -34,5 +34,12 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
         song = track.name
         artists = ', '.join([a.name for a in track.artists])
         album = track.album.name
-        message = song + '\\n' + artists + ' - ' + album
-        self.notify(message)
+        if sys.platform.startswith('darwin'):
+            subtitle = artists + ' - ' + album
+            message = song
+        elif sys.platform.startswith('linux'):
+            message = song + '\\n' + artists + ' - ' + album
+        else:
+            # Unsupported system
+            raise EnvironmentError((1, "This operating system is not supported."))
+        self.notify(message, subtitle)
