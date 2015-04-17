@@ -59,6 +59,11 @@ Project resources
 Changelog
 =========
 
+v0.3.3 (2015-04-17)
+-------------------
+
+- Fixes a bug with displaying the songname on Linux
+
 v0.3.2 (2015-02-14)
 -------------------
 
