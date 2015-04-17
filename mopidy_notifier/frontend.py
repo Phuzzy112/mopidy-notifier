@@ -24,10 +24,10 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
         subprocess.call(call)
 
     def on_start(self):
-        self.notify('Starting...')
+        self.notify('Starting...','')
 
     def on_stop(self):
-        self.notify('Shutting down...')
+        self.notify('Shutting down...','')
 
     def track_playback_started(self, tl_track):
         track = tl_track.track
@@ -38,6 +38,7 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
             subtitle = artists + ' - ' + album
             message = song
         elif sys.platform.startswith('linux'):
+            subtitle = ''
             message = song + '\\n' + artists + ' - ' + album
         else:
             # Unsupported system
