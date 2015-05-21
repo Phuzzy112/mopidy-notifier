@@ -33,7 +33,7 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
         track = tl_track.track
         song = track.name
         artists = ', '.join([a.name for a in track.artists])
-        if track.album.name:
+        if track.album:
             album = track.album.name
         else:
             album = ''
