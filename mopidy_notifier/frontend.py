@@ -33,7 +33,10 @@ class NotifierFrontend(pykka.ThreadingActor, CoreListener):
         track = tl_track.track
         song = track.name
         artists = ', '.join([a.name for a in track.artists])
-        album = track.album.name
+        if track.album.name:
+            album = track.album.name
+        else:
+            album = ''
         if sys.platform.startswith('darwin'):
             subtitle = artists + ' - ' + album
             message = song
